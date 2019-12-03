@@ -1,5 +1,11 @@
-from beSMArt import __version__, __doc__
 from setuptools import setup, find_packages
+
+
+def get_version():
+    g = {}
+    with open("beSMArt/version.py") as fp:
+        exec(fp.read(), g)
+    return g['__version__']
 
 
 def readme():
@@ -9,10 +15,10 @@ def readme():
 
 setup(
     name="beSMArt",
-    version=__version__,
+    version=get_version(),
     author="Patryk Niedzwiedzinski",
     author_email="pniedzwiedzinski19@gmail.com",
-    description=__doc__,
+    description="Connect to SMA solar panel",
     long_description=readme(),
     license="MIT",
     packages=find_packages(),
