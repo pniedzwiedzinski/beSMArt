@@ -1,5 +1,7 @@
 # beSMArt
 
+![](https://i.imgflip.com/1jqcf8.jpg)
+
 Python connector for SMA solar panel
 
 ## Usage
