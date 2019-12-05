@@ -20,6 +20,7 @@ setup(
     author_email="pniedzwiedzinski19@gmail.com",
     description="Connect to SMA solar panel",
     long_description=readme(),
+		long_description_content_type='text/markdown',
     license="MIT",
     packages=find_packages(),
     install_requires=['requests']
