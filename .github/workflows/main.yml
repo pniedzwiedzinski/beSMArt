@@ -1,0 +1,24 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v1.1.1
+      - name: Build package
+        run: |
+          python3 setup.py sdist bdist_wheel
+      - name: Publish package
+        if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
+        uses: pypa/gh-action-pypi-publish@v1.0.0a0
+        with:
+          user: __token__
+          password: ${{ secrets.pypi_password }}
+
+        
+
