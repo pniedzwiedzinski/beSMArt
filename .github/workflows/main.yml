@@ -3,11 +3,12 @@ name: CI
 on: [push]
 
 jobs:
-  build:
+  build-n-publish:
 
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@master
       - name: Setup Python
         uses: actions/setup-python@v1.1.1
       - name: Build package
