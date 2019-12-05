@@ -4,6 +4,12 @@
 
 Python connector for SMA solar panel
 
+## Installation
+
+```sh
+pip3 install beSMArt
+```
+
 ## Usage
 
 ```py
